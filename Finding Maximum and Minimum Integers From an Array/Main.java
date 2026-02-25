@@ -6,9 +6,18 @@ public class Main{
         int n = scanner.nextInt();
         int[] array = new int[n];
         
-        for(int i = 0; i < n; i++){
-            System.out.print("Enter " + i + " integer: ");
-            array[i] = scanner.nextInt();
+        for(int i = 1; i <= n; i++){
+            String ordinal = "";
+            if(i == 1)
+                ordinal = "st";
+            else if(i == 2)
+                ordinal = "nd";
+            else if(i == 3)
+                ordinal = "rd";
+            else 
+                ordinal = "th";
+            System.out.print("Enter " + i + ordinal + " integer: ");
+            array[i-1] = scanner.nextInt();
         }
 
         int max, min;
